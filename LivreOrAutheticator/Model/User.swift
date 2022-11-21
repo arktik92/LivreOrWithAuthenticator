@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+// MARK: - User
+struct User: Codable {
+    var id: Int
+    var username: String
+    var email: String
+}

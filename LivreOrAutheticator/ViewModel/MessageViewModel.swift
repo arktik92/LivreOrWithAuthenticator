@@ -7,14 +7,9 @@
 
 import SwiftUI
 
-struct MessageViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct MessageViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        MessageViewModel()
-    }
+class MessageViewModel: ObservableObject {
+    @Published var message: Message?
+    @Published var messages: Messages?
+    
+    let endPoint: String = "http://localhost:8080"
 }
